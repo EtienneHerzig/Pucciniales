@@ -12,18 +12,18 @@ Pucciniales is a open-source firebase alternative aiming to support as many feat
 
 ### Explenation
 
-- actix-web
+- **actix-web**
   - Why?
     - It is one of the best established options while being sufficiently fast. This increases the amount of people capable of contributing to the project, increases the chances of vulnerabilities being reported and eases development.
-- Redis
+- **Redis**
   - Why?
     - Well established, very mature and performs well.
-- PostgreSQL
+- **PostgreSQL**
   - Why?
     - Well established, very mature and performs well.
   - Why not CockroachDB?
     - I would be willing to trade the huge establishment of PostgreSQL against the horizontal scalability of CockroachDB but their licensing is simply far too restrictive to offer it as the native SQL database.
-- ArangoDB
+- **ArangoDB**
   - Why?
     - Mature and is useful across the board for key-value, document, semi-relational and graph databases.
   - Why not MongoDB?
