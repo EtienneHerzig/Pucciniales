@@ -34,7 +34,8 @@ Pucciniales is a open-source firebase alternative aiming to support as many feat
 ## Licenses
 
 - **Libraries**
-  - **[actic-web](https://github.com/actix/actix-web)**: [Apache-2.0](https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)) or [MIT](https://tldrlegal.com/license/mit-license)
+  - **[actic-web](https://crates.io/crates/actix-web)**: [Apache-2.0](https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)) or [MIT](https://tldrlegal.com/license/mit-license)
+  - **[openssl](https://crates.io/crates/openssl)**: [Apache-2.0](https://tldrlegal.com/license/apache-license-2.0-(apache-2.0))
 - **Databases**
   - **[Redis](https://redis.io)**: [BSD 3-clause](https://tldrlegal.com/license/bsd-3-clause-license-(revised))
   - **[PostgreSQL](https://www.postgresql.org)**: [PostgreSQL License](https://tldrlegal.com/license/postgresql-license-(postgresql))
