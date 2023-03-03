@@ -27,7 +27,9 @@ Pucciniales is a open-source firebase alternative aiming to support as many feat
   - Why?
     - Mature and is useful across the board for key-value, document, semi-relational and graph databases.
   - Why not MongoDB?
-    - Not quite as varied as Arango and I am too unsure about possible ramifications of the license for people who want to use Pucciniales.
+    - Not quite as varied as Arango and I am too unsure about possible ramifications of the license for people who want to use Pucciniales. It might be added as an optional DB down the line for people that are okay with it's license.
+  - Why not SurrealDB?
+    - Also quite interesting but their current License disallows DBaaS which would hinder any commercial deployment of this product. It might be added as an optional DB down the line for people that are okay with it's license.
 
 ## Licenses
 
