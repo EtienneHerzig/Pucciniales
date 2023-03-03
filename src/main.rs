@@ -1,12 +1,8 @@
-use actix_web::{get, HttpResponse, App, HttpServer, Responder};
+mod rs_routes;
+
+use actix_web::{App, HttpServer};
 use openssl::ssl::{SslAcceptor, SslFiletype, SslMethod, SslAcceptorBuilder};
-
-
-
-#[get("/")]
-async fn hello() -> impl Responder {
-    HttpResponse::Ok().body("Hello world!")
-}
+use rs_routes as route;
 
 
 #[actix_web::main] // or #[tokio::main]
@@ -16,7 +12,7 @@ async fn main() -> std::io::Result<()> {
     builder.set_certificate_chain_file("ssc_cert.pem")?;
 
     
-    HttpServer::new(|| { App::new().service(hello) })
+    HttpServer::new(|| { App::new().service(route::index::index) })
     .bind_openssl("127.0.0.1:443", builder)?
     .run()
     .await
