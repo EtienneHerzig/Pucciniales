@@ -1,6 +1,7 @@
 mod routes;
 
 use actix_web::{App, HttpServer};
+use actix_files as fs;
 use openssl::ssl::{SslAcceptor, SslFiletype, SslMethod, SslAcceptorBuilder};
 use routes as route;
 
@@ -12,7 +13,7 @@ async fn main() -> std::io::Result<()> {
     builder.set_certificate_chain_file("ssc_cert.pem")?;
 
 
-    HttpServer::new(|| { App::new()
+    HttpServer::new(|| { App::new().service(fs::Files::new("/../svelte/build", ".").show_files_listing())
         .service(route::index::index)
     })
     .bind_openssl("0.0.0.0:443", builder)?
