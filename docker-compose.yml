@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+  pucciniales:
+    build: .
+    depends_on:
+      - redis
+      - postgres
+      - arango
+    ports:
+      - "443:443"
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    environment:
+      - REDIS_HOST_PASSWORD=password
+  postgres:
+    image: postgres:alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+  arango:
+    image: arangodb:latest
+    ports:
+      - "8529:8529"
+    environment:
+      - ARANGO_ROOT_PASSWORD=password

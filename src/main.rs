@@ -11,11 +11,11 @@ async fn main() -> std::io::Result<()> {
     builder.set_private_key_file("ssc_key.pem", SslFiletype::PEM)?;
     builder.set_certificate_chain_file("ssc_cert.pem")?;
 
-    
+
     HttpServer::new(|| { App::new()
-        .service(route::index::index) 
+        .service(route::index::index)
     })
-    .bind_openssl("127.0.0.1:443", builder)?
+    .bind_openssl("0.0.0.0:443", builder)?
     .run()
     .await
 }
